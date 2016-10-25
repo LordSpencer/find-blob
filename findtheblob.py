@@ -96,55 +96,60 @@ def findColorSpot(picture, color):
 
 ######################Code Starts Here##################################
 
-colors=input("What color would you like to go to? (Red = 1, Blue = 2, Green = 3, Yellow = 4)")
-def go_red():
-    turnBy(45)
-    forward(1,3.75)
-    pic = takePicture()
-    show(pic)
-    backward(1,3.75)
-    turnBy(-45)
+turnBy(randrange(1,360))
 
-def go_blue():
-    turnBy(135)
-    forward(1,3.75)
-    pic = takePicture()
-    show(pic)
-    backward(1,3.75)
-    turnBy(-135)
+pic = takePicture()
 
-def go_yellow():
-    turnBy(-45)
-    forward(1,3.75)
-    pic = takePicture()
-    show(pic)
-    backward(1,3.75)
-    turnBy(45)
+getWidth(pic)
+x = findColorSpot(pic,1)
+print(x)
+
+#colors=input("What color would you like to go to? (Red = 1, Blue = 2, Green = 3, Yellow = 4)")
+
+#def go_red():
+    #turnBy(45)
+    #forward(1,3.75)
+    #pic = takePicture()
+    #show(pic)
+    #backward(1,3.75)
+    #turnBy(-45)
+
+#def go_blue():
+    #turnBy(135)
+    #forward(1,3.75)
+    #pic = takePicture()
+    #show(pic)
+    #backward(1,3.75)
+    #turnBy(-135)
+
+#def go_yellow():
+    #turnBy(-45)
+    #forward(1,3.75)
+    #pic = takePicture()
+    #show(pic)
+    #backward(1,3.75)
+    #turnBy(45)
     
-def go_green():
-    turnBy(-135)
-    forward(1,3.75)
-    pic = takePicture()
-    show(pic)
-    backward(1,3.75)
-    turnBy(135)
+#def go_green():
+    #turnBy(-135)
+    #forward(1,3.75)
+    #pic = takePicture()
+    #show(pic)
+    #backward(1,3.75)
+    #turnBy(135)
 
-red = 1
-blue = 2
-green = 3
-yellow = 4
+#red = 1
+#blue = 2
+#green = 3
+#yellow = 4
 
-if colors == "1":
-    go_red()
-elif colors == "2":
-    go_blue()
-elif colors == "3":
-    go_green()
-elif colors == "4":
-    go_yellow()
-else:
-    stop()
-    
-
-
-
+#if colors == "1":
+    #go_red()
+#elif colors == "2":
+    #go_blue()
+#elif colors == "3":
+    #go_green()
+#elif colors == "4":
+    #go_yellow()
+#else:
+    #stop()
