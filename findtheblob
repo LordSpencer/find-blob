@@ -128,12 +128,12 @@ def go_green():
     backward(1,3.75)
     turnBy(135)
 
-#input = "What color would you like to go to?"
+input = ("What color would you like to go to?")
 
-#if input = "red" or "Red":
-    #go_red()
-#elif input = "blue" or "Blue":
-    #go_blue()
+if input == 1:
+    go_red()
+elif input == 2:
+    go_blue()
     
 
 
