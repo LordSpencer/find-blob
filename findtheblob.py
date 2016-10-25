@@ -98,11 +98,26 @@ def findColorSpot(picture, color):
 
 turnBy(randrange(1,360))
 
+red=int(1)
+green=int(2)
+blue=int(3)
+yellow=int(4)
+
 pic = takePicture()
+
+def go_blob():
+    forward(1,3.75)
+    pic = takePicture()
+    show(pic)
+    backward(1,3.75)
 
 getWidth(pic)
 x = findColorSpot(pic,1)
 print(x)
+
+while x != 0:
+    go_blob()
+    
 
 #colors=input("What color would you like to go to? (Red = 1, Blue = 2, Green = 3, Yellow = 4)")
 
