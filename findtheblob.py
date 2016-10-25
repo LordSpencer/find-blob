@@ -96,55 +96,75 @@ def findColorSpot(picture, color):
 
 ######################Code Starts Here##################################
 
-colors=input("What color would you like to go to? (Red = 1, Blue = 2, Green = 3, Yellow = 4)")
-def go_red():
-    turnBy(45)
+turnBy(randrange(1,360))
+
+red=int(1)
+green=int(2)
+blue=int(3)
+yellow=int(4)
+
+pic = takePicture()
+
+def go_blob():
     forward(1,3.75)
     pic = takePicture()
     show(pic)
     backward(1,3.75)
-    turnBy(-45)
 
-def go_blue():
-    turnBy(135)
-    forward(1,3.75)
-    pic = takePicture()
-    show(pic)
-    backward(1,3.75)
-    turnBy(-135)
+getWidth(pic)
+x = findColorSpot(pic,1)
+print(x)
 
-def go_yellow():
-    turnBy(-45)
-    forward(1,3.75)
-    pic = takePicture()
-    show(pic)
-    backward(1,3.75)
-    turnBy(45)
-    
-def go_green():
-    turnBy(-135)
-    forward(1,3.75)
-    pic = takePicture()
-    show(pic)
-    backward(1,3.75)
-    turnBy(135)
-
-red = 1
-blue = 2
-green = 3
-yellow = 4
-
-if colors == "1":
-    go_red()
-elif colors == "2":
-    go_blue()
-elif colors == "3":
-    go_green()
-elif colors == "4":
-    go_yellow()
-else:
-    stop()
+while x != 0:
+    go_blob()
     
 
+#colors=input("What color would you like to go to? (Red = 1, Blue = 2, Green = 3, Yellow = 4)")
 
+#def go_red():
+    #turnBy(45)
+    #forward(1,3.75)
+    #pic = takePicture()
+    #show(pic)
+    #backward(1,3.75)
+    #turnBy(-45)
 
+#def go_blue():
+    #turnBy(135)
+    #forward(1,3.75)
+    #pic = takePicture()
+    #show(pic)
+    #backward(1,3.75)
+    #turnBy(-135)
+
+#def go_yellow():
+    #turnBy(-45)
+    #forward(1,3.75)
+    #pic = takePicture()
+    #show(pic)
+    #backward(1,3.75)
+    #turnBy(45)
+    
+#def go_green():
+    #turnBy(-135)
+    #forward(1,3.75)
+    #pic = takePicture()
+    #show(pic)
+    #backward(1,3.75)
+    #turnBy(135)
+
+#red = 1
+#blue = 2
+#green = 3
+#yellow = 4
+
+#if colors == "1":
+    #go_red()
+#elif colors == "2":
+    #go_blue()
+#elif colors == "3":
+    #go_green()
+#elif colors == "4":
+    #go_yellow()
+#else:
+    #stop()
